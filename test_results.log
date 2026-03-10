@@ -1,0 +1,176 @@
+[1;34m===> Compiling RouteToGateway.java...[0m
+[0;32m[SUCCESS] Compiled successfully.[0m
+
+[1;36m====================================================[0m
+[1;36m  TEST CASE: test_asymmetric.txt[0m
+[1;36m====================================================[0m
+[0;90m[Input File Contents][0m
+3
+0 1 5
+10 0 10
+-1 2 0
+2
+3
+
+[0;90m[Execution Output][0m
+----------------------------------------------------
+Forwarding Table for 1
+To	Cost	Next Hop
+2	7	3
+
+Forwarding Table for 3
+To	Cost	Next Hop
+2	2	2
+----------------------------------------------------
+
+
+[1;36m====================================================[0m
+[1;36m  TEST CASE: test_bonus_alternative.txt[0m
+[1;36m====================================================[0m
+[0;90m[Input File Contents][0m
+5
+0 10 10 -1 -1
+-1 0 -1 5 -1
+-1 -1 0 5 -1
+-1 -1 -1 0 2
+-1 -1 -1 -1 0
+5
+4
+
+[0;90m[Execution Output][0m
+----------------------------------------------------
+Forwarding Table for 1
+To	Cost	Next Hop
+5	17	2,3
+
+Forwarding Table for 2
+To	Cost	Next Hop
+5	7	4
+
+Forwarding Table for 3
+To	Cost	Next Hop
+5	7	4
+
+Forwarding Table for 4
+To	Cost	Next Hop
+5	2	5
+----------------------------------------------------
+
+
+[1;36m====================================================[0m
+[1;36m  TEST CASE: test_disconnected.txt[0m
+[1;36m====================================================[0m
+[0;90m[Input File Contents][0m
+4
+0 1 2 -1
+1 0 1 -1
+2 1 0 -1
+-1 -1 -1 0
+2
+3
+
+[0;90m[Execution Output][0m
+----------------------------------------------------
+Forwarding Table for 1
+To	Cost	Next Hop
+2	3	3
+
+Forwarding Table for 3
+To	Cost	Next Hop
+2	1	2
+
+Forwarding Table for 4
+To	Cost	Next Hop
+2	-1	-1
+----------------------------------------------------
+
+
+[1;36m====================================================[0m
+[1;36m  TEST CASE: test_input.txt[0m
+[1;36m====================================================[0m
+[0;90m[Input File Contents][0m
+6
+0 1 10 -1 -1 2
+10 0 1 -1 -1 -1
+1 10 0 -1 -1 -1
+-1 -1 2 0 1 10
+-1 -1 -1 10 0 1
+-1 -1 -1 1 10 0
+2 5
+6
+[0;90m[Execution Output][0m
+----------------------------------------------------
+Forwarding Table for 1
+To	Cost	Next Hop
+2	7	6
+5	4	6
+
+Forwarding Table for 3
+To	Cost	Next Hop
+2	8	1
+5	5	1
+
+Forwarding Table for 4
+To	Cost	Next Hop
+2	10	3
+5	7	3
+
+Forwarding Table for 6
+To	Cost	Next Hop
+2	5	4
+5	2	4
+----------------------------------------------------
+
+
+[1;36m====================================================[0m
+[1;36m  TEST CASE: test_tie_break.txt[0m
+[1;36m====================================================[0m
+[0;90m[Input File Contents][0m
+4
+0 1 1 -1
+-1 0 -1 2
+-1 -1 0 2
+-1 -1 -1 0
+4
+2 3
+
+[0;90m[Execution Output][0m
+----------------------------------------------------
+Forwarding Table for 1
+To	Cost	Next Hop
+4	3	2
+
+Forwarding Table for 2
+To	Cost	Next Hop
+4	2	4
+
+Forwarding Table for 3
+To	Cost	Next Hop
+4	-1	-1
+----------------------------------------------------
+
+
+[1;36m====================================================[0m
+[1;36m  TEST CASE: test_unreachable.txt[0m
+[1;36m====================================================[0m
+[0;90m[Input File Contents][0m
+3
+0 5 2
+-1 0 -1
+-1 -1 0
+2
+3
+
+[0;90m[Execution Output][0m
+----------------------------------------------------
+Forwarding Table for 1
+To	Cost	Next Hop
+2	-1	-1
+
+Forwarding Table for 3
+To	Cost	Next Hop
+2	-1	-1
+----------------------------------------------------
+
+
+[1;34m===> All tests completed.[0m
