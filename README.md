@@ -20,6 +20,7 @@ A new script `test.sh` has been created for a cleaner, colorized, and robust tes
 *   **Visual Clarity**: Uses colors to distinguish between headers, input, and output.
 *   **Automatic Discovery**: Finds all `.txt` files in the directory and uses them as test inputs.
 *   **Input Context**: Prints the contents of each test file before showing results.
+*   **Results Logging**: Automatically saves all terminal output to `test_results.log` for future reference.
 
 ---
 
