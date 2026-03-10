@@ -9,6 +9,14 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+# --- Logging Setup ---
+LOG_FILE="test_results.log"
+# Clear existing log file
+> "$LOG_FILE"
+# Redirect all output to both terminal and log file
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+
 # --- 1. Compilation ---
 echo -e "${BLUE}===> Compiling RouteToGateway.java...${NC}"
 javac RouteToGateway.java
